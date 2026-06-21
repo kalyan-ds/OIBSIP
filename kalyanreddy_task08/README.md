@@ -32,7 +32,29 @@ The project covers the complete machine learning pipeline, including:
 
 ## 📂 Dataset Information
 
-**Dataset:** Twitter Sentiment Dataset
+The dataset used in this project is not included in this repository due to its large size.
+
+### Dataset Source
+
+* **Twitter Sentiment Dataset**
+* Source: Kaggle
+* Link: https://www.kaggle.com/datasets/manchunhui/us-election-2020-tweets
+
+### Dataset File
+
+```text
+Twitter_Data.csv
+```
+
+After downloading the dataset, place it inside:
+
+```text
+kalyanreddy_task08/
+```
+
+before running:
+python sentiment_analysis.py
+
 
 **Features**
 
