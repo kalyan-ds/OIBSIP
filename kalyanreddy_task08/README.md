@@ -38,7 +38,7 @@ The dataset used in this project is not included in this repository due to its l
 
 * **Twitter Sentiment Dataset**
 * Source: Kaggle
-* Link: https://www.kaggle.com/datasets/manchunhui/us-election-2020-tweets
+* Link: https://www.kaggle.com/datasets/saurabhshahane/twitter-sentiment-dataset
 
 ### Dataset File
 
