@@ -1,246 +1,165 @@
-# 🧠 Sentiment Analysis using NLP and Machine Learning
-
-![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
-![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange?logo=scikitlearn)
-![NLP](https://img.shields.io/badge/NLP-Sentiment%20Analysis-green)
-![Status](https://img.shields.io/badge/Status-Completed-success)
+# 📱 Google Play Store Data Analysis
 
 ## 📌 Project Overview
 
-This project focuses on **Sentiment Analysis** using Natural Language Processing (NLP) and Machine Learning techniques. The goal is to classify text into **Positive**, **Neutral**, and **Negative** sentiments by analyzing social media tweets.
-
-The project covers the complete machine learning pipeline, including:
-
-* Data Exploration and Cleaning
-* Text Preprocessing
-* Feature Engineering using TF-IDF
-* Model Training and Evaluation
-* Data Visualization
-* Business Insights and Recommendations
+This project analyzes Google Play Store applications to uncover market trends, user behavior, category popularity, app ratings, pricing patterns, and customer sentiments. The analysis combines exploratory data analysis (EDA), visualization, and sentiment analysis to generate valuable business insights.
 
 ---
 
 ## 🎯 Objectives
 
-* Understand sentiment patterns in text data.
-* Apply NLP techniques for text preprocessing.
-* Train multiple machine learning models.
-* Compare model performances.
-* Extract business insights from sentiment trends.
+- Clean and preprocess Google Play Store datasets.
+- Analyze app categories and distribution.
+- Explore ratings, installs, reviews, and pricing trends.
+- Understand user sentiments from reviews.
+- Generate visualizations for better interpretation.
+- Extract actionable business insights and recommendations.
 
 ---
 
-## 📂 Dataset Information
+## 📂 Dataset
 
-The dataset used in this project is not included in this repository due to its large size.
+### Apps Dataset
+apps.csv: https://www.kaggle.com/datasets/utshabkumarghosh/android-app-market-on-google-play
+Contains:
 
-### Dataset Source
+- App Name
+- Category
+- Rating
+- Reviews
+- Size
+- Installs
+- Price
+- Content Rating
+- Genres
+- Android Version
 
-* **Twitter Sentiment Dataset**
-* Source: Kaggle
-* Link: https://www.kaggle.com/datasets/saurabhshahane/twitter-sentiment-dataset
+### User Reviews Dataset
+user_review.csv: https://www.kaggle.com/datasets/utshabkumarghosh/android-app-market-on-google-play
+Contains:
 
-### Dataset File
+- App
+- Translated Review
+- Sentiment
+- Sentiment Polarity
+- Sentiment Subjectivity
+
+**Dataset Source:**
+
+Google Play Store Dataset
+
+User Reviews Dataset
+
+*(Datasets are excluded from this repository due to size constraints.)*
+
+---
+
+## 🛠 Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+
+---
+
+## 📊 Visualizations
+
+### Category Distribution
+
+![](outputs/category_distribution.png)
+
+### Ratings Distribution
+
+![](outputs/ratings_distribution.png)
+
+### Install Distribution
+
+![](outputs/install_distribution.png)
+
+### Price Distribution
+
+![](outputs/price_distribution.png)
+
+### Correlation Heatmap
+
+![](outputs/correlation_heatmap.png)
+
+### Sentiment Distribution
+
+![](outputs/sentiment_distribution.png)
+
+### Top Free Apps
+
+![](outputs/top_free_apps.png)
+
+### Top Paid Apps
+
+![](outputs/top_paid_apps.png)
+
+### Rating vs Reviews
+
+![](outputs/rating_vs_reviews.png)
+
+### Rating vs Installs
+
+![](outputs/rating_vs_installs.png)
+
+---
+
+## 🔍 Key Insights
+
+- Family and Game categories dominate the Play Store.
+- Most applications are free.
+- Apps with higher ratings tend to receive more installs and reviews.
+- Positive sentiment dominates user reviews.
+- Price has little influence on app popularity.
+
+---
+
+## 💡 Recommendations
+
+- Focus on maintaining ratings above 4.0.
+- Improve user experience through regular updates.
+- Monitor user sentiments to identify issues.
+- Utilize free apps with ads and in-app purchases.
+- Target high-demand categories for better reach.
+
+---
+
+## 📁 Project Structure
 
 ```text
-Twitter_Data.csv
-```
-
-After downloading the dataset, place it inside:
-
-```text
-kalyanreddy_task08/
-```
-
-before running:
-python sentiment_analysis.py
-
-
-**Features**
-
-* `clean_text` → Tweet text
-* `category`
-
-  * `-1` → Negative
-  * `0` → Neutral
-  * `1` → Positive
-
-Dataset Size:
-
-* Total Records: **162,980**
-
----
-
-# ⚙️ Technologies Used
-
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
-* NLTK
-* WordCloud
-* Scikit-Learn
-
----
-
-# 🔄 Project Workflow
-
-```text
-Dataset
-   ↓
-Data Cleaning
-   ↓
-Text Preprocessing
-   ↓
-TF-IDF Vectorization
-   ↓
-Train-Test Split
-   ↓
-Machine Learning Models
-   ↓
-Performance Evaluation
-   ↓
-Visualization
-   ↓
-Business Insights
-```
-
----
-
-# 🧹 Text Preprocessing
-
-The following NLP techniques were applied:
-
-* Lowercase conversion
-* Removal of punctuation and numbers
-* Tokenization
-* Stopword removal
-* Stemming using Porter Stemmer
-
----
-
-# 🤖 Machine Learning Models
-
-The following models were trained and evaluated:
-
-### 1️⃣ Multinomial Naive Bayes
-
-* Accuracy: **68.69%**
-
-### 2️⃣ Logistic Regression
-
-* Accuracy: **84.35%**
-
-### 3️⃣ Linear SVM ⭐ (Best Model)
-
-* Accuracy: **85.09%**
-* F1 Score: **85.01%**
-
-### 4️⃣ Random Forest
-
-* Accuracy: **82.24%**
-
----
-
-# 📊 Visualizations
-
-## Sentiment Distribution
-
-![Sentiment Distribution](outputs/sentiment_distribution.png)
-
----
-
-## Positive Word Cloud
-
-![Positive Word Cloud](outputs/wordcloud_positive.png)
-
----
-
-## Negative Word Cloud
-
-![Negative Word Cloud](outputs/wordcloud_negative.png)
-
----
-
-## Linear SVM Confusion Matrix
-
-![Confusion Matrix](outputs/confusion_matrix_svm.png)
-
----
-
-## Model Comparison
-
-![Model Comparison](outputs/model_comparison.png)
-
----
-
-# 📈 Performance Comparison
-
-| Model                   | Accuracy   |
-| ----------------------- | ---------- |
-| Multinomial Naive Bayes | 68.69%     |
-| Logistic Regression     | 84.35%     |
-| ⭐ Linear SVM            | **85.09%** |
-| Random Forest           | 82.24%     |
-
----
-
-# 💡 Business Insights
-
-* Positive sentiment dominates social media discussions.
-* Negative tweets reveal dissatisfaction and concerns.
-* Linear SVM achieved the highest performance.
-* NLP techniques effectively classify sentiments from text.
-* Automated sentiment analysis can help monitor public opinion in real time.
-
----
-
-# 🚀 Recommendations
-
-* Deploy Linear SVM for production use.
-* Monitor customer feedback continuously.
-* Focus on negative sentiment tweets to improve products and services.
-* Retrain models periodically using fresh data.
-* Integrate sentiment analytics into dashboards and reporting systems.
-
----
-
-# 📁 Project Structure
-
-```text
-kalyanreddy_task08
+kalyanreddy_task09/
 │
-├── sentiment_analysis.py
-├── requirements.txt
+├── google_play_store_analysis.py
 ├── README.md
-├── Twitter_Data.csv
-│
-└── outputs
-    ├── sentiment_distribution.png
-    ├── wordcloud_positive.png
-    ├── wordcloud_negative.png
-    ├── confusion_matrix_svm.png
-    └── model_comparison.png
+├── requirements.txt
+├── outputs/
+│   ├── app_size_distribution.png
+│   ├── average_rating_by_category.png
+│   ├── category_distribution.png
+│   ├── content_rating_distribution.png
+│   ├── correlation_heatmap.png
+│   ├── install_distribution.png
+│   ├── price_distribution.png
+│   ├── ratings_distribution.png
+│   ├── rating_vs_installs.png
+│   ├── rating_vs_reviews.png
+│   ├── sentiment_distribution.png
+│   ├── top_free_apps.png
+│   └── top_paid_apps.png
 ```
 
 ---
 
-# 🏆 Key Learning Outcomes
+## 🚀 Future Enhancements
 
-✔ Natural Language Processing (NLP)
-
-✔ Text Cleaning and Preprocessing
-
-✔ Feature Engineering using TF-IDF
-
-✔ Machine Learning Model Building
-
-✔ Model Evaluation and Comparison
-
-✔ Data Visualization
-
-✔ Business Insight Generation
+- Interactive dashboards using Power BI or Tableau.
+- Predict app success using machine learning.
+- Topic modeling on reviews.
+- Advanced sentiment analysis with NLP.
 
 ---
 
@@ -255,3 +174,5 @@ Swami Vivekanandha Institute of Technology
 GitHub: https://github.com/kalyan-ds
 
 LinkedIn: https://www.linkedin.com/in/kalyan-reddy-byreddy-559b6b344
+
+---
