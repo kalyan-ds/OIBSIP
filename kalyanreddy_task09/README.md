@@ -84,6 +84,7 @@ Performed:
 
 ### Dataset Statistics
 
+* Dataset Link: https://www.kaggle.com/datasets/rtatman/english-word-frequency
 * Total Records: 333,333
 * Clean Records: 333,331
 * Missing Values Removed
